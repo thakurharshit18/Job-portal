@@ -11,7 +11,6 @@ const router = useRouter();
   const handleSubmit = async () => {
     try {
       const response = await loginUser({ email, password });
-      router.push('/jobsdashboard');
     } catch (error) {
       console.error("Error logging in user", error);  
     }

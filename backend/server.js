@@ -3,6 +3,7 @@ import dotenv from 'dotenv';
 import cors from 'cors';
 import userRoutes from './routes/user.routes.js';
 import jobRoutes from './routes/jobs.routes.js';
+import { restrictTo } from './middlewares/authMiddleware.js';
 dotenv.config(); // ✅ Load env variables
 
 const app = express();

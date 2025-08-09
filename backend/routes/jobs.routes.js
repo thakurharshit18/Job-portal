@@ -6,6 +6,7 @@ const router = express.Router();
 
 
 // router.get('/jobs',getAlljobs);
+
 router.post('/',postanewjob);
 router.get('/',getAlljobs);
 export default router;
