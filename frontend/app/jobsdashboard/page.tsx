@@ -33,7 +33,7 @@ const router = useRouter();
     };
 
     fetchJobs();
-  }, []);
+  }, [jobs]);
   const handlenavigation = ()=>{
     router.push("/jobCreation");
   }
