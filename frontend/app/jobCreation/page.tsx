@@ -28,10 +28,14 @@ export default function JobCreation() {
 
   const handleSubmit = async () => {
     try {
+      if(!title||!description||!company||!location){
+        toast.error("Please Provide all Credentials");
+      }
       const res = await createJob({ title, description, salary, company, location });
       console.log("The job was created successfully", res);
       setSuccess(true);
       setError("");
+     
       toast.success("Job Created Successfully");
       // Reset form
       setTitle("");

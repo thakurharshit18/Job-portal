@@ -9,7 +9,9 @@ const prisma =  new PrismaClient();
 export const postanewjob = async(req,res)=>{
 const {title,description,location,company,salary} = req.body;
 try{
-
+if(!title||!description||!location||!company||!salary){
+  return res.status(400).json({message:"Please fill all the fields"});
+}
     const newjob = await  prisma.job.create({
         data:{
             title,
