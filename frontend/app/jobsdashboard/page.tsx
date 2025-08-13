@@ -69,7 +69,7 @@ const router = useRouter();
               </p>
               <div className="flex justify-between items-center">
                 <span className="text-xs text-gray-400"> </span>
-                <button className="bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium py-2 px-4 rounded-lg">
+                <button onClick={()=>router.push(`jobsdashboard/${job.id}`)} className="bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium py-2 px-4 rounded-lg">
                   View Job
                 </button>
               </div>

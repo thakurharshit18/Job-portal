@@ -10,8 +10,9 @@ export default function Home() {
   return (
     <div className="w-full h-screen bg-black flex flex-col">
       {/* Header */}
-      <header className="flex justify-end p-4">
-        <RainbowButton onClick={()=>router.push('/register')}>Sign Up or Login to Continue</RainbowButton>
+      <header className="flex justify-end p-4 gap-5">
+        <RainbowButton onClick={()=>router.push('/register')}>Sign Up</RainbowButton>
+        <RainbowButton onClick={()=>router.push('/login')}> Login </RainbowButton>
       </header>
 
       {/* Main Hero Section */}
@@ -45,7 +46,8 @@ export default function Home() {
 
         {/* Description */}
         <TypingAnimation
-          duration={50}
+          duration={40}
+          delay={0}
           className="text-white font-light text-lg md:text-2xl max-w-3xl"
         >
           HireNeXT is your modern job portal where talented job seekers and

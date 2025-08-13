@@ -32,13 +32,13 @@ export const useAuth = () => {
         localStorage.setItem("token", token);
       }
 
-      if (role === "employee") {
-        router.push("/jobsdashboard");
-      } else if (role === "organization") {
-        router.push("/jobCreation");
-      } else {
-        router.push("/adminPage");
-      }
+      // if (role === "employee") {
+      //   router.push("/jobsdashboard");
+      // } else if (role === "organization") {
+      //   router.push("/jobCreation");
+      // } else {
+      //   router.push("/adminPage");
+      // }
 
       return response.data;
     } catch (error: any) {
@@ -54,7 +54,7 @@ export const useAuth = () => {
     try {
       setLoading(true);
       const response = await axios.post("http://localhost:3002/api/user/login", login);
-
+     router.push('/jobsdashboard');
       const role = response.data.user?.role?.toLowerCase();
       const token = response.data.user?.token;
 
@@ -62,13 +62,13 @@ export const useAuth = () => {
         localStorage.setItem("token", token);
       }
 
-      if (role === "employee") {
-        router.push("/jobsdashboard");
-      } else if (role === "organization") {
-        router.push("/jobCreation");
-      } else {
-        router.push("/adminPage");
-      }
+      // if (role === "employee") {
+      //   router.push("/jobsdashboard");
+      // } else if (role === "organization") {
+      //   router.push("/jobCreation");
+      // } else {
+      //   router.push("/adminPage");
+      // }
 
       return response.data;
     } catch (error: any) {

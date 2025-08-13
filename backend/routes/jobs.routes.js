@@ -1,5 +1,5 @@
 import express from 'express';
-import { getAlljobs, postanewjob } from '../controllers/jobs.controller.js';
+import { getAlljobs, Jobdetails, postanewjob } from '../controllers/jobs.controller.js';
 import { restrictTo, verifyToken } from '../middlewares/authMiddleware.js';
 
 const router = express.Router();
@@ -9,4 +9,5 @@ const router = express.Router();
 
 router.post('/',postanewjob);
 router.get('/',getAlljobs);
+router.get('/:id',Jobdetails);
 export default router;
