@@ -8,7 +8,7 @@ import { useRouter } from "next/navigation";
 export default function Home() {
   const router = useRouter();
   return (
-    <div className="w-full h-screen bg-black flex flex-col">
+    <div className="w-full h-screen  flex flex-col">
       {/* Header */}
       <header className="flex justify-end p-4 gap-5">
         <RainbowButton onClick={()=>router.push('/register')}>Sign Up</RainbowButton>
