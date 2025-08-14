@@ -23,7 +23,7 @@ export const useAuth = () => {
   const registerUser = async (data: RegisterInfo) => {
     try {
       setLoading(true);
-      const response = await axios.post("http://localhost:3002/api/user/register", data);
+      const response = await axios.post("https://job-portal-kjrs.onrender.com/api/user/register", data);
 
       const role = response.data.user?.role?.toLowerCase();
       const token = response.data.user?.token;
@@ -53,7 +53,7 @@ export const useAuth = () => {
   const loginUser = async (login: LoginInfo) => {
     try {
       setLoading(true);
-      const response = await axios.post("http://localhost:3002/api/user/login", login);
+      const response = await axios.post("https://job-portal-kjrs.onrender.com/api/user/login", login);
      router.push('/jobsdashboard');
       const role = response.data.user?.role?.toLowerCase();
       const token = response.data.user?.token;

@@ -20,7 +20,7 @@ export const useJobs = () => {
       const token = localStorage.getItem("token");
 
       const res = await axios.post<Job>(
-        "http://localhost:3002/api/jobs/",
+        "https://job-portal-kjrs.onrender.com/api/jobs/",
         data,
         {
           headers: {
@@ -44,7 +44,7 @@ export const useJobs = () => {
       setLoading(true);
       const token = localStorage.getItem("token");
 
-      const res = await axios.get<{ jobs: Job[] }>("http://localhost:3002/api/jobs/", {
+      const res = await axios.get<{ jobs: Job[] }>("https://job-portal-kjrs.onrender.com/api/jobs/", {
         headers: {
           "Content-Type": "application/json",
           Authorization: `Bearer ${token}`,

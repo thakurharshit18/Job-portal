@@ -21,7 +21,7 @@ export default function JobDetails() {
 
     const fetchJob = async () => {
       try {
-        const res = await axios.get<Job>(`http://localhost:3002/api/jobs/${id}`);
+        const res = await axios.get<Job>(`https://job-portal-kjrs.onrender.com/api/jobs/${id}`);
         setJob(res.data);
       } catch (error) {
         console.error("Error fetching job:", error);
