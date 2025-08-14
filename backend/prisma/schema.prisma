@@ -33,8 +33,7 @@ model Application {
   id         String   @id @default(uuid())
   userId     String   // Manual foreign key
   jobId      String   // Manual foreign key
-  resumeUrl  String
-  status     String   @default("PENDING") // No enum
+  resumeUrl  String  
   appliedAt  DateTime @default(now())
 }
   
