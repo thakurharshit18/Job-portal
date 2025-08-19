@@ -7,7 +7,7 @@ const router = express.Router();
 
 // router.get('/jobs',getAlljobs);
 
-router.post('/',postanewjob);
-router.get('/',getAlljobs);
-router.get('/:id',Jobdetails);
+router.post('/',verifyToken,restrictTo("ORGANIZATION"),postanewjob);
+router.get('/',verifyToken,getAlljobs);
+router.get('/:id',verifyToken,Jobdetails);
 export default router;
