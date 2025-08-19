@@ -91,7 +91,7 @@ export default function Register() {
             </svg>
           </div>
           <h1 className="text-3xl font-bold text-gray-900 mb-2">
-            Join JobHub
+            Join HireNext
           </h1>
           <p className="text-gray-600">
             Create your account to explore great opportunities
