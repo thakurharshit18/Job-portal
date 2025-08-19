@@ -41,7 +41,7 @@ export default function JobsDashboard() {
       <div className="flex flex-col md:flex-row justify-between items-center mb-10 max-w-6xl mx-auto">
         <h1 className="text-4xl font-bold text-gray-800">Explore Jobs</h1>
         <button
-          onClick={() => router.push("/jobCreation")}
+          onClick={() => router.push("/jobcreation")}
           className="mt-4 md:mt-0 bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-6 rounded-lg shadow-md transition"
         >
           + Create Job
