@@ -4,15 +4,15 @@ import { RainbowButton } from "@/components/magicui/rainbow-button";
 import { SparklesCore } from "@/components/ui/sparkles";
 import { TypingAnimation } from "@/components/magicui/typing-animation";
 import { useRouter } from "next/navigation";
-
+import { signIn,signOut, useSession } from "next-auth/react";
 export default function Home() {
   const router = useRouter();
+  const session = useSession();
   return (
     <div className="w-full h-screen  flex flex-col">
       {/* Header */}
       <header className="flex justify-end p-4 gap-5">
-        <RainbowButton onClick={()=>router.push('/register')}>Sign Up</RainbowButton>
-        <RainbowButton onClick={()=>router.push('/login')}> Login </RainbowButton>
+        <RainbowButton onClick={()=>signIn("google",{callbackUrl:"/jobsdashboard"})}> Login </RainbowButton>
       </header>
 
       {/* Main Hero Section */}
